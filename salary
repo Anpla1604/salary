@@ -1,0 +1,27 @@
+# Number of working hours per day
+hours_per_day = 6
+
+# Hourly wage
+hourly_wage = 20
+
+# Number of days in a month
+days_in_month = 30
+
+# Function to calculate monthly salary
+def calculate_monthly_salary(hours_per_day, hourly_wage, days_in_month):
+    # Calculate the number of working days in a month
+    working_days = (days_in_month // 4) * 2 + min(2, days_in_month % 4)
+    
+    # Calculate the total working hours in a month
+    total_working_hours = working_days * hours_per_day
+    
+    # Calculate the monthly salary
+    monthly_salary = total_working_hours * hourly_wage
+    
+    return monthly_salary
+
+# Calculate the monthly salary
+monthly_salary = calculate_monthly_salary(hours_per_day, hourly_wage, days_in_month)
+
+# Print the result
+print(f"Monthly salary: ${monthly_salary}")
